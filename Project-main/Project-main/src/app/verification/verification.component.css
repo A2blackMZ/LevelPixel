@@ -1,0 +1,37 @@
+/* verification.component.css */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: linear-gradient(135deg, #3e5c9a, #e9684b);
+  background-attachment: fixed;
+  color: #ffffff;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  flex: 1;
+}
+
+.card {
+  background-color: #ffffff;
+  color: #3e5c9a;
+}
+
+.btn-primary {
+  background-color: #e9684b;
+  border-color: #e9684b;
+}
+
+.form-control:focus {
+  border-color: #e9684b;
+  box-shadow: 0 0 0 0.2rem rgba(230, 104, 75, 0.25);
+}
+
+.link-primary {
+  color: #e9684b;
+}

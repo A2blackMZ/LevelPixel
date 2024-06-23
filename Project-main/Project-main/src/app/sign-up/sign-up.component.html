@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Créer un compte</title>
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <section class="py-3 py-md-5 py-xl-8">
+        <div class="container">
+            <div class="row gy-4 align-items-center">
+                <div class="col-12 col-md-6 col-xl-7">
+                    <div class="d-flex justify-content-center text-bg-custom custom-container">
+                        <div class="col-12 col-xl-19">
+                            <img class="img-fluid rounded mb-4" loading="lazy" src="../../assets/img/logoPort.png" width="600" height="80" alt="Port Autonome de Cotonou Logo">
+                            <hr class="border-primary-subtle mb-4">
+                            <h2 class="h1 mb-4" id="typed-header"></h2>
+                            <p class="lead mb-5" id="typed-paragraph"></p>
+                            <div class="text-endx">
+                                <!-- Icon or additional content -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-xl-5">
+                    <div class="card border-0 rounded-4">
+                        <div class="card-body p-3 p-md-4 p-xl-5">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="mb-4">
+                                        <h2 class="h3">Inscription</h2>
+                                        <h3 class="fs-6 fw-normal text-secondary m-0">Entrez vos informations pour vous inscrire</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <form (ngSubmit)="onSubmit()">
+                                <div class="row gy-3 overflow-hidden">
+                                    <div class="col-12">
+                                        <div class="form-floating mb-3">
+                                            <input type="text" class="form-control" name="nom" id="nom" placeholder="Nom" [(ngModel)]="userData.nom" required>
+                                            <label for="nom" class="form-label">Nom</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating mb-3">
+                                            <input type="text" class="form-control" name="prenom" id="prenom" placeholder="Prenom" [(ngModel)]="userData.prenom" required>
+                                            <label for="prenom" class="form-label">Prénom</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating mb-3">
+                                            <input type="email" class="form-control" name="email" id="email" placeholder="nom@example.com" [(ngModel)]="userData.email" required>
+                                            <label for="email" class="form-label">Email</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating mb-3">
+                                            <input type="password" class="form-control" name="password" id="password" placeholder="Mot de passe" [(ngModel)]="userData.password" required>
+                                            <label for="password" class="form-label">Mot de passe</label>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating mb-3">
+                                            <input type="text" class="form-control" name="telephone" id="telephone" placeholder="Téléphone" [(ngModel)]="userData.telephone" required>
+                                            <label for="telephone" class="form-label">Téléphone</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="iAgree" id="iAgree" required>
+                                            <label class="form-check-label text-secondary" for="iAgree">
+                                                J'accepte les <a href="#!" class="link-primary text-decoration-none">termes et conditions</a>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="d-grid">
+                                            <button class="btn btn-primary btn-lg" type="submit">S'inscrire</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="d-flex gap-2 gap-md-4 flex-column flex-md-row justify-content-md-end mt-4">
+                                        <p class="m-0 text-secondary text-center">Vous avez déjà un compte? <a href="/login" class="link-primary text-decoration-none">Se connecter</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-danger mt-3">{{ registrationError }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var typedHeader = new Typed('#typed-header', {
+                strings: ["Nous créons des opportunités pour votre avenir professionnel."],
+                typeSpeed: 50,
+                startDelay: 500,
+                showCursor: false,
+                onComplete: function () {
+                    typedParagraph.start();
+                }
+            });
+
+            var typedParagraph = new Typed('#typed-paragraph', {
+                strings: ["Postulez pour un stage et démarrez votre carrière avec nous."],
+                typeSpeed: 50,
+                startDelay: 1000,
+                showCursor: false,
+                onComplete: function () {
+                    typedParagraph.stop();
+                }
+            });
+        });
+    </script>-->
+</body>
+</html>
